@@ -11,10 +11,13 @@ public class LastLoginTime {
 	@Id
 	String emailId;
 
-	long lastLoginTime;
+	String ip;
 
-	public LastLoginTime(String emailId, long lastLoginTime) {
+	long loginTime;
+
+	public LastLoginTime(String emailId, String ip, long loginTime) {
 		this.emailId = emailId;
-		this.lastLoginTime = lastLoginTime;
+		this.ip = ip;
+		this.loginTime = loginTime;
 	}
 }

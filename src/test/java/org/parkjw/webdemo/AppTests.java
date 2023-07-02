@@ -17,7 +17,7 @@ class AppTests {
 	@Test
 	void contextLoads() {
 
-		LastLoginTime lastLoginTime = new LastLoginTime("vim@kakao.com", System.currentTimeMillis());
+		LastLoginTime lastLoginTime = new LastLoginTime("vim@kakao.com", "127.0.0.1", System.currentTimeMillis());
 
 		userLoginRepository.save(lastLoginTime);
 
