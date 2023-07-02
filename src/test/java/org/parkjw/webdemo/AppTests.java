@@ -2,8 +2,8 @@ package org.parkjw.webdemo;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.parkjw.webdemo.domain.user.entity.LastLoginTime;
-import org.parkjw.webdemo.domain.user.repository.UserLoginRepository;
+import org.parkjw.webdemo.domain.lastlogin.entity.LastLogin;
+import org.parkjw.webdemo.domain.lastlogin.repository.LastLoginRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -12,20 +12,20 @@ import org.springframework.boot.test.context.SpringBootTest;
 class AppTests {
 
 	@Autowired
-	private UserLoginRepository userLoginRepository;
+	private LastLoginRepository lastLoginRepository;
 
 	@Test
 	void contextLoads() {
 
-		LastLoginTime lastLoginTime = new LastLoginTime("vim@kakao.com", "127.0.0.1", System.currentTimeMillis());
+		LastLogin lastLogin = new LastLogin("vim@kakao.com", "127.0.0.1", System.currentTimeMillis());
 
-		userLoginRepository.save(lastLoginTime);
+		lastLoginRepository.save(lastLogin);
 
-		userLoginRepository.findById(lastLoginTime.getEmailId());
+		lastLoginRepository.findById(lastLogin.getEmailId());
 
-		userLoginRepository.count();
+		lastLoginRepository.count();
 
-		userLoginRepository.delete(lastLoginTime);
+		lastLoginRepository.delete(lastLogin);
 	}
 
 }
