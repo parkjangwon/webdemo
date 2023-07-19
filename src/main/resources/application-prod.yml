@@ -21,7 +21,7 @@ spring:
         format_sql: true
     defer-datasource-initialization: true
 objectStorage:
-  endpoint: test
+  endpoint: endpoint
   bucketName: bucketName
   regionId: regionId
   auth:
