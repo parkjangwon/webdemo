@@ -1,6 +1,5 @@
 package org.parkjw.webdemo.domain.user.repository;
 
-import org.parkjw.webdemo.domain.user.dto.UserDTO;
 import org.parkjw.webdemo.domain.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 

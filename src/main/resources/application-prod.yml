@@ -1,0 +1,29 @@
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  datasource:
+    url: jdbc:h2:mem:webdemo
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true # H2 DB Console (http://localhost:8080/h2-console)
+  jpa:
+    database: H2
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+objectStorage:
+  endpoint: endpoint
+  bucketName: bucketName
+  regionId: regionId
+  auth:
+    accessKey: accessKey
+    secretKey: secretKey

@@ -34,8 +34,15 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'javax.ws.rs:javax.ws.rs-api:2.1'
+
     // model mapper
     implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.0.0'
+
+    // OCI Object Storage
+    implementation 'software.amazon.awssdk:s3:2.17.36'
+
 }
 
 tasks.named('test') {

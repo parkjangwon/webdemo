@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File Upload/Download Example</title>
+</head>
+<body>
+<h1>File Upload/Download Example</h1>
+
+<h2>Upload File</h2>
+<form method="post" action="/api/v1/file/upload" enctype="multipart/form-data">
+    <input type="file" name="file" />
+    <button type="submit">Upload</button>
+</form>
+
+<h2>Download File</h2>
+<form method="get" action="/api/v1/file/download">
+    <label>
+        <input type="text" name="fileName" value="homer.png"/>
+    </label>
+    <button type="submit">Download</button>
+</form>
+</body>
+</html>
